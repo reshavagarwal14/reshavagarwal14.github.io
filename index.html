@@ -10,11 +10,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #fae1dd;
             color: #333;
         }
         header {
-            background: #0077b6;
+            background: #e29578;
             color: white;
             padding: 20px;
             text-align: center;
@@ -42,62 +42,25 @@
         .project {
             margin-bottom: 20px;
         }
+        .resume-btn {
+            display: inline-block;
+            background: #e29578;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
         footer {
             text-align: center;
             padding: 10px;
-            background: #0077b6;
+            background: #e29578;
             color: white;
             position: relative;
             bottom: 0;
             width: 100%;
         }
-        .resume-btn {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 10px;
-            background: #0077b6;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .resume-btn:hover {
-            background: #005f8a;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 400px;
-            margin: auto;
-        }
-        input, textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px;
-            background: #0077b6;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #005f8a;
-        }
     </style>
-    <script>
-        function submitForm(event) {
-            event.preventDefault();
-            alert("Thank you for reaching out! I'll get back to you soon.");
-            document.getElementById("contact-form").reset();
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -107,6 +70,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -141,7 +105,7 @@
             <li>🏅 <strong>Certificate of Appreciation</strong> – Ford Motor Pvt Ltd (Mar 2022)</li>
         </ul>
     </section>
-    
+
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
@@ -155,19 +119,12 @@
             <a href="your-github-link">View Project</a>
         </div>
     </section>
-
+    
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:reshavagarwal14@gmail.com">reshavagarwal14@gmail.com</a></p>
-        <p>Phone: <a href="tel:+916360675819">+91-6360675819</a></p>
-        <p>LinkedIn: <a href="your-linkedin-url">https://www.linkedin.com/in/reshavagarwal14</a></p>
-
-        <form id="contact-form" onsubmit="submitForm(event)">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <p>Phone: +91-6360675819</p>
+        <p>LinkedIn: <a href="your-linkedin-url">Your LinkedIn Profile</a></p>
     </section>
     
     <footer>
