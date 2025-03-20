@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reshav Agarwal - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .project {
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #0077b6;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .resume-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #0077b6;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .resume-btn:hover {
+            background: #005f8a;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005f8a;
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Thank you for reaching out! I'll get back to you soon.");
+            document.getElementById("contact-form").reset();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Reshav Agarwal</h1>
+        <p>Data Analyst | SQL | Python | Tableau</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm Reshav Agarwal, a Quality Engineer transitioning into Data Analytics. Passionate about insights, data visualization, and problem-solving.</p>
+        <a href="your-resume.pdf" class="resume-btn" download>Download Resume</a>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Sales Dashboard</h3>
+            <p>Built an interactive Tableau dashboard analyzing sales trends.</p>
+            <a href="your-github-link">View Project</a>
+        </div>
+        <div class="project">
+            <h3>SQL Data Cleaning</h3>
+            <p>Performed data cleaning using SQL on a messy dataset.</p>
+            <a href="your-github-link">View Project</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:reshavagarwal14@gmail.com">reshavagarwal14@gmail.com</a></p>
+        <p>Phone: <a href="tel:+916360675819">+91-6360675819</a></p>
+        <p>LinkedIn: <a href="your-linkedin-url">your-linkedin</a></p>
+
+        <form id="contact-form" onsubmit="submitForm(event)">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Reshav Agarwal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
