@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reshav Agarwal - Portfolio</title>
+    <title>Reshav Agarwal | Data Analyst</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
-    <!-- Header & Theme Toggle -->
+    <!-- Navigation Bar -->
     <header>
         <div class="logo">RA</div>
         <nav>
@@ -28,8 +28,8 @@
     <section id="hero">
         <div class="hero-content">
             <img src="your-image.jpg" alt="Reshav Agarwal" class="profile-pic">
-            <h1 class="fade-in">Hi, I'm <span class="highlight">Reshav Agarwal</span></h1>
-            <p class="typewriter">Data Analyst</p>
+            <h1>I'm <span class="highlight">Reshav Agarwal</span></h1>
+            <p class="typing-text"></p>
             <div class="social-icons">
                 <a href="your-github-link" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="your-linkedin-url" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -38,10 +38,17 @@
         </div>
     </section>
 
+    <!-- Contact Section (Just Below Hero) -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:reshavagarwal14@gmail.com">reshavagarwal14@gmail.com</a></p>
+        <p>Phone: +91-6360675819</p>
+    </section>
+
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Quality Engineer transitioning into Data Analytics with expertise in SQL, Python, and Tableau. Passionate about insights, data visualization, and solving business problems.</p>
+        <p>Data Analyst passionate about insights, data visualization, and problem-solving. Former Quality Engineer, now specializing in SQL, Python, and Tableau.</p>
     </section>
 
     <!-- Projects Section -->
@@ -49,35 +56,43 @@
         <h2>Projects</h2>
         <div class="projects-container">
             <div class="project-card">
-                <h3>📊 Sales Dashboard</h3>
-                <p>Built an interactive Tableau dashboard analyzing sales trends.</p>
-                <a href="your-github-link" target="_blank">View Project</a>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>📊 Sales Dashboard</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Built an interactive Tableau dashboard analyzing sales trends.</p>
+                            <a href="your-github-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="project-card">
-                <h3>🗄️ SQL Data Cleaning</h3>
-                <p>Performed data cleaning using SQL on a messy dataset.</p>
-                <a href="your-github-link" target="_blank">View Project</a>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>🗄️ SQL Data Cleaning</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Performed data cleaning using SQL on a messy dataset.</p>
+                            <a href="your-github-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2>⚡ Skills & Expertise</h2>
+        <h2>Skills</h2>
         <div class="skills-container">
-            <span>SQL</span>
-            <span>Python</span>
-            <span>Tableau</span>
-            <span>Excel</span>
-            <span>Azure DevOps</span>
+            <div class="skill"><i class="fab fa-python"></i> Python</div>
+            <div class="skill"><i class="fas fa-database"></i> SQL</div>
+            <div class="skill"><i class="fas fa-chart-line"></i> Tableau</div>
+            <div class="skill"><i class="fab fa-microsoft"></i> Excel</div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:reshavagarwal14@gmail.com">reshavagarwal14@gmail.com</a></p>
-        <p>Phone: +91-6360675819</p>
     </section>
 
     <footer>
