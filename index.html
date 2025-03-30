@@ -1,966 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reshav Agarwal - Portfolio</title>
-    <style>
-        /* Global Styles */
-        :root {
-            --primary-color: #0e76a8;
-            --secondary-color: #333;
-            --light-color: #f4f4f4;
-            --dark-color: #222;
-            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            line-height: 1.6;
-            background-color: var(--light-color);
-            color: var(--secondary-color);
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--primary-color);
-            transition: all 0.3s ease;
-        }
-        
-        a:hover {
-            color: #074b6b;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        img {
-            max-width: 100%;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            margin-top: 15px;
-            text-align: center;
-        }
-        
-        .btn:hover {
-            background: #074b6b;
-            color: white;
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            color: var(--secondary-color);
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 20px;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--primary-color);
-        }
-        
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: white;
-            box-shadow: var(--box-shadow);
-            z-index: 1000;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        
-        .nav-links {
-            display: flex;
-        }
-        
-        .nav-links li {
-            margin-left: 20px;
-        }
-        
-        .nav-links a {
-            color: var(--secondary-color);
-            font-weight: 600;
-            padding: 5px;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        .hamburger {
-            display: none;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        #home {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97') no-repeat center center/cover;
-            padding-top: 80px;
-        }
-        
-        .hero-content {
-            max-width: 600px;
-        }
-        
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: var(--secondary-color);
-        }
-        
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #555;
-        }
-        
-        .social-links {
-            display: flex;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            margin-right: 15px;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background: #074b6b;
-            transform: translateY(-3px);
-        }
-        
-        /* About Section */
-        #about {
-            background-color: white;
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .about-img {
-            flex: 1;
-            text-align: center;
-            margin-right: 50px;
-        }
-        
-        .about-img img {
-            max-width: 350px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .about-text {
-            flex: 2;
-        }
-        
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--secondary-color);
-        }
-        
-        .about-text p {
-            margin-bottom: 15px;
-            color: #555;
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        /* Experience Section */
-        #experience {
-            background-color: var(--light-color);
-        }
-        
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: var(--primary-color);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-        }
-        
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-        }
-        
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-        
-        .timeline-item:nth-child(even) {
-            left: 50%;
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background-color: white;
-            border: 4px solid var(--primary-color);
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-        
-        .timeline-item:nth-child(even)::after {
-            left: -10px;
-        }
-        
-        .timeline-content {
-            padding: 20px;
-            background-color: white;
-            position: relative;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .timeline-content h3 {
-            margin: 0 0 10px 0;
-            color: var(--secondary-color);
-        }
-        
-        .timeline-content h4 {
-            margin: 0 0 10px 0;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-        
-        .timeline-content .date {
-            color: #777;
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-        
-        .timeline-content ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-top: 10px;
-        }
-        
-        .timeline-content ul li {
-            margin-bottom: 5px;
-        }
-        
-        /* Skills Section */
-        #skills {
-            background-color: white;
-        }
-        
-        .skills-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .skill-card {
-            background: var(--light-color);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .skill-card i {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .skill-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary-color);
-        }
-        
-        .skill-card p {
-            color: #555;
-        }
+  <title>Reshav Agarwal - Portfolio</title>
+  <meta content="Portfolio of Reshav Agarwal" name="description">
+  <meta content="data analyst, portfolio, Reshav Agarwal" name="keywords">
 
-        /* Education & Certifications Section */
-        #education {
-            background-color: var(--light-color);
-        }
-        
-        .education-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        
-        .education-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease;
-        }
-        
-        .education-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .education-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-        }
-        
-        .education-card h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .education-card .date {
-            color: #777;
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-        
-        .education-card p {
-            color: #555;
-            margin-bottom: 10px;
-        }
-        
-        .certifications {
-            margin-top: 30px;
-        }
-        
-        .certifications h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--secondary-color);
-        }
-        
-        .certifications-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .certification-item {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease;
-        }
-        
-        .certification-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .certification-item h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .certification-item p {
-            color: #555;
-        }
-        
-        /* Projects Section */
-        #projects {
-            background-color: white;
-        }
-        
-        .projects-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        
-        .project-card {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .project-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .project-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover .project-img img {
-            transform: scale(1.1);
-        }
-        
-        .project-info {
-            padding: 20px;
-            background: white;
-        }
-        
-        .project-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-        }
-        
-        .project-info p {
-            color: #555;
-            margin-bottom: 15px;
-        }
-        
-        .project-links {
-            display: flex;
-        }
-        
-        .project-links a {
-            margin-right: 15px;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-        
-        /* Awards Section */
-        #awards {
-            background-color: var(--light-color);
-        }
-        
-        .awards-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .award-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        
-        .award-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .award-card i {
-            font-size: 3rem;
-            color: gold;
-            margin-bottom: 20px;
-        }
-        
-        .award-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-        }
-        
-        .award-card .company {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .award-card .date {
-            color: #777;
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        
-        .award-card p {
-            color: #555;
-        }
-        
-        /* Contact Section */
-        #contact {
-            background-color: white;
-        }
-        
-        .contact-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        .contact-info {
-            flex: 1;
-            margin-right: 50px;
-        }
-        
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--secondary-color);
-        }
-        
-        .contact-info p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-        
-        .contact-form {
-            flex: 1;
-            background: var(--light-color);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--secondary-color);
-            font-weight: 600;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            height: 150px;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark-color);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-        }
-        
-        .footer-content p {
-            margin-bottom: 15px;
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .about-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .about-img {
-                margin-right: 0;
-                margin-bottom: 30px;
-            }
-            
-            .contact-info {
-                margin-right: 0;
-                margin-bottom: 30px;
-            }
-            
-            .contact-content {
-                flex-direction: column;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item:nth-child(even) {
-                left: 0;
-            }
-            
-            .timeline::after {
-                left: 31px;
-            }
-            
-            .timeline-item::after {
-                left: 21px;
-                top: 15px;
-                right: auto;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                text-align: center;
-                transition: all 0.3s ease;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            }
-            
-            .nav-links.active {
-                left: 0;
-            }
-            
-            .nav-links li {
-                margin: 0;
-                padding: 15px 0;
-            }
-            
-            .hamburger {
-                display: block;
-            }
-            
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .projects-content {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    /* Custom styles for animated text */
+    .animated-text {
+      display: inline-block;
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid;
+      padding-right: 5px;
+      animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #1e1e1e; }
+    }
+
+    /* Center alignment helpers */
+    .text-center {
+      text-align: center;
+    }
+
+    .justify-content-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Hobbies section */
+    .hobbies-section {
+      margin-top: 30px;
+    }
+
+    .hobbies-section ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .hobbies-section li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .hobbies-section li i {
+      margin-right: 10px;
+      color: #149ddd;
+    }
+
+    /* Social links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      font-size: 18px;
+      display: inline-block;
+      background: #212431;
+      color: #fff;
+      line-height: 1;
+      padding: 8px 0;
+      margin-right: 4px;
+      border-radius: 50%;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #149ddd;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Reshav Agarwal</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#awards">Awards</a></li>
-                    <li><a href="#contact">Contact</a></li>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <h1 class="logo"><a href="index.html">Reshav Agarwal</a></h1>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
+      <h1 class="animated-text">Hello, I'm Reshav Agarwal</h1>
+      <h2>Aspiring Data Analyst</h2>
+      <div class="social-links">
+        <a href="mailto:youremail@example.com" class="email"><i class="bx bx-envelope"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/reshavagarwal14" class="github"><i class="bx bxl-github"></i></a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3>Aspiring Data Analyst</h3>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Location:</strong> Your Location</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> youremail@example.com</li>
                 </ul>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hello, I'm <span>Reshav Agarwal</span></h1>
-                <p>Quality Engineer with expertise in data analysis and ETL processes</p>
-                <a href="Resume_ReshavAgarwal.pdf" class="btn" download>Download CV</a>
+        <div class="hobbies-section text-center">
+          <h3>Hobbies</h3>
+          <ul>
+            <li><i class="bx bx-food-menu"></i> Cooking</li>
+            <li><i class="bx bx-tennis-ball"></i> Playing Badminton</li>
+            <li><i class="bx bx-world"></i> Travelling</li>
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+      <div class="container text-center" data-aos="fade-up">
+
+        <div class="section-title text-center">
+          <h2>Skills</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="progress">
+                  <span class="skill">SQL <i class="val">90%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <span class="skill">Python <i class="val">85%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <span class="skill">Tableau <i class="val">80%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="progress">
+                  <span class="skill">Excel <i class="val">90%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <span class="skill">Power BI <i class="val">75%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <span class="skill">ETL <i class="val">70%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Education Section ======= -->
+    <section id="education" class="education">
+      <div class="container text-center" data-aos="fade-up">
+
+        <div class="section-title text-center">
+          <h2>Education</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="education-item">
+              <h4>Bachelor of Technology in Computer Science</h4>
+              <h5>2016 - 2020</h5>
+              <p><em>Your University, Your Location</em></p>
+              <p>GPA: 3.8/4.0</p>
+            </div>
+            <!-- Add more education items if needed -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Education Section -->
+
+    <!-- ======= Certifications Section ======= -->
+    <section id="certifications" class="certifications">
+      <div class="container text-center" data-aos="fade-up">
+
+        <div class="section-title text-center">
+          <h2>Certifications</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="certification-item">
+              <h4>Data Science Professional Certificate</h4>
+              <h5>2022</h5>
+              <p><em>IBM</em></p>
+            </div>
+            <div class="certification-item">
+              <h4>SQL Advanced Certification</h4>
+              <h5>2021</h5>
+              <p><em>Oracle</em></p>
+            </div>
+            <!-- Add more certification items -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Certifications Section -->
+
+    <!-- ======= Projects Section ======= -->
+    <section id="projects" class="projects">
+      <div class="container text-center" data-aos="fade-up">
+
+        <div class="section-title text-center">
+          <h2>Projects</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="project-item">
+              <h4>Data Analysis Dashboard</h4>
+              <p>
+                Created an interactive dashboard using Power BI to visualize sales data and provide insights
+                to stakeholders. The dashboard helped increase sales by 15%.
+              </p>
+              <a href="#" class="btn btn-primary">View Project</a>
+            </div>
+            <div class="project-item">
+              <h4>Predictive Analytics Model</h4>
+              <p>
+                Developed a machine learning model using Python to predict customer churn with 87% accuracy.
+                Implemented the model into the company's CRM system.
+              </p>
+              <a href="#" class="btn btn-primary">View Project</a>
+            </div>
+            <!-- Add more project items -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Projects Section -->
+
+    <!-- ======= Awards Section ======= -->
+    <section id="awards" class="awards">
+      <div class="container text-center" data-aos="fade-up">
+
+        <div class="section-title text-center">
+          <h2>Awards</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="award-item">
+              <h4>Best Data Analysis Project</h4>
+              <h5>2022</h5>
+              <p><em>University Hackathon</em></p>
+            </div>
+            <div class="award-item">
+              <h4>Employee of the Month</h4>
+              <h5>2021</h5>
+              <p><em>Your Company</em></p>
+            </div>
+            <!-- Add more award items -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Awards Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container text-center" data-aos="fade-up">
+
+        <div class="section-title text-center">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="info">
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>youremail@example.com</p>
+              </div>
+
+              <div class="social">
+                <h4>Social Profiles:</h4>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/reshavagarwal14/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/reshavagarwal14" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="mailto:youremail@example.com" class="email"><i class="bx bx-envelope"></i></a>
+                  <a href="https://linkedin.com/in/yourprofile" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  <a href="https://github.com/reshavagarwal14" class="github"><i class="bx bxl-github"></i></a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="My_Pic.jpg" alt="Reshav Agarwal">
-                </div>
-                <div class="about-text">
-                    <h3>Quality Engineer at Epsilon</h3>
-                    <p>I am a dedicated Quality Engineer with a strong background in data analysis, ETL processes, and project management. With experience in both quality engineering and data engineering roles, I specialize in optimizing data flows and improving operational efficiency.</p>
-                    <p>My expertise spans across comprehensive analysis of various data processes, Agile methodology implementation, and streamlining validation cycles. I have a proven track record of identifying critical issues early, preventing project delays, and delivering significant improvements in operational efficiency.</p>
-                    <p>I'm passionate about creating efficient data solutions and sharing knowledge with my colleagues. My technical skills include SQL, Python, Tableau, Excel, and ETL tools like Informatica and Alteryx.</p>
-                    <a href="Resume_ReshavAgarwal.pdf" class="btn" download>Download CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </section><!-- End Contact Section -->
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-title">
-                <h2>Professional Experience</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Epsilon</h3>
-                        <h4>Quality Engineer 2</h4>
-                        <div class="date">July 2023 - Present</div>
-                        <ul>
-                            <li>Identified critical issues in early stages, preventing a potential 2-month delay and keeping the project on track</li>
-                            <li>Performed comprehensive analysis of Inbound, Marts, Extracts, CCPA/GDPR, and NCOA processes for hospitality and financial sector clients</li>
-                            <li>Leveraged Agile methodology to optimize ETL data flow and improve pipeline quality, achieving a 25% increase in operational efficiency</li>
-                            <li>Prepared and delivered 5+ key documents to initiate validation, providing feedback to Automation and BSA teams</li>
-                            <li>Drove a 15% increase in efficiency and a 20% reduction in validation cycle time</li>
-                            <li>Developed a proof of concept (POC) for the Extract analysis flow and presented it in a Guild Session to 150+ team members</li>
-                            <li>Improved understanding and adoption by 30%</li>
-                            <li>Organized team-building activities, enhancing team cohesion and engagement</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Ford Motors Pvt Ltd</h3>
-                        <h4>Data Engineer</h4>
-                        <div class="date">September 2021 - June 2023</div>
-                        <ul>
-                            <li>Managed Aftermarket Data with Informatica and Alteryx, improving processing efficiency by 30%</li>
-                            <li>Migrated a project from a legacy system to Informatica ahead of schedule</li>
-                            <li>Implemented an ETL pipeline, boosting system efficiency by 20%</li>
-                            <li>Managed the complete Agile workflow for the project, working with the Project Manager to oversee Rally for daily stand-ups</li>
-                            <li>Achieved a 15% increase in team productivity and on-time project delivery</li>
-                            <li>Coordinated between 3 teams to successfully complete the Business Continuity Plan (BCP) and Annual File Review (AFR) 2022</li>
-                            <li>Ensured 100% alignment with organizational objectives and on-time delivery</li>
-                            <li>Organized and facilitated internal team-building activities, fostering collaboration and improving team morale</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </main><!-- End #main -->
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Skills</h2>
-            </div>
-            <div class="skills-content">
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>SQL</h3>
-                    <p>Advanced SQL for data analysis and database management, with expertise in complex queries for data transformation and reporting.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
-                    <p>Python programming for data analysis, automation, and scripting to improve data processing workflows.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-chart-bar"></i>
-                    <h3>Tableau</h3>
-                    <p>Data visualization and dashboard creation to transform complex data into actionable insights.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-file-excel"></i>
-                    <h3>Excel</h3>
-                    <p>Advanced Excel skills for data analysis, reporting, and creating business intelligence solutions.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-tasks"></i>
-                    <h3>Azure DevOps/Rally</h3>
-                    <p>Project management and Agile methodology implementation for efficient team coordination and delivery.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-exchange-alt"></i>
-                    <h3>Informatica/Alteryx</h3>
-                    <p>ETL process development and optimization to streamline data workflows and improve system efficiency.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Reshav Agarwal</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
 
-    <!-- Education & Certifications Section -->
-    <section id="education">
-        <div class="container">
-            <div class="section-title">
-                <h2>Education & Certifications</h2>
-            </div>
-            <div class="education-content">
-                <div class="education-card">
-                    <h3>Christ University, Bengaluru</h3>
-                    <h4>B.Tech in Computer Science and Engineering</h4>
-                    <div class="date">July 2017 - June 2021</div>
-                    <p>CGPA: 8.88</p>
-                </div>
-                <div class="certifications">
-                    <h3>Professional Certifications</h3>
-                    <div class="certifications-list">
-                        <div class="certification-item">
-                            <h4>SQL for Data Analysis: Advanced SQL Querying Techniques</h4>
-                            <p>Udemy</p>
-                        </div>
-                        <div class="certification-item">
-                            <h4>Complete Data Analyst Bootcamp: From Basics To Advanced</h4>
-                            <p>Udemy</p>
-                        </div>
-                        <div class="certification-item">
-                            <h4>The Complete Python Bootcamp: From Zero to Hero in Python</h4>
-                            <p>Udemy</p>
-                        </div>
-                        <div class="certification-item">
-                            <h4>Tableau 2024 A-Z: Hands-On Tableau Training for Data Science</h4>
-                            <p>Udemy</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-    <!-- Awards Section -->
-    <section id="awards">
-        <div class="container">
-            <div class="section-title">
-                <h2>Awards & Recognition</h2>
-            </div>
-            <div class="awards-content">
-                <div class="award-card">
-                    <i class="fas fa-award"></i>
-                    <h3>2023 Q4 Star Award</h3>
-                    <div class="company">Epsilon India</div>
-                    <div class="date">December 2023</div>
-                </div>
-                <div class="award-card">
-                    <i class="fas fa-certificate"></i>
-                    <h3>Certificate of Appreciation</h3>
-                    <div class="company">Ford Motor Pvt Ltd</div>
-                    <div class="date">March 2022</div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Key Projects</h2>
-            </div>
-            <div class="projects-content">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="/api/placeholder/400/320" alt="ETL Pipeline Optimization">
-                    </div>
-                    <div class="project-info">
-                        <h3>ETL Pipeline Optimization</h3>
-                        <p>Streamlined ETL data flow for hospitality and financial sector clients, resulting in a 25% increase in operational efficiency and improved data quality.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/reshavagarwal14" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="/api/placeholder/400/320" alt="Extract Analysis Flow POC">
-                    </div>
-                    <div class="project-info">
-                        <h3>Extract Analysis Flow POC</h3>
-                        <p>Developed a proof of concept for Extract analysis flow that improved understanding and adoption by 30% across team members.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/reshavagarwal14" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Add any custom JavaScript you need here
+    $(document).ready(function() {
+      // Animation for skills progress bars
+      $('.progress-bar').each(function() {
+        $(this).css("width", $(this).attr("aria-valuenow") + '%');
+      });
+    });
+  </script>
+
+</body>
+</html>
