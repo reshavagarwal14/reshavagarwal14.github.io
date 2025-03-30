@@ -3,100 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reshav Agarwal | Data Analyst</title>
+    <title>Reshav Agarwal | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <header>
-        <div class="logo">RA</div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button id="theme-toggle">🌙</button></li>
-            </ul>
-        </nav>
-    </header>
-
     <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
+    <header>
+        <div class="container">
             <img src="My_Pic.jpg" alt="Reshav Agarwal" class="profile-pic">
-            <h1>I'm <span class="highlight">Reshav Agarwal</span></h1>
-            <p class="typing-text"></p>
-            <div class="social-icons">
+            <h1>Reshav Agarwal</h1>
+            <p class="animated-text">Quality Engineer ➝ Aspiring Data Analyst</p>
+            <div class="social-links">
                 <a href="https://github.com/reshavagarwal14" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/reshavagarwal14/" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
-            <a href="Resume_ReshavAgarwal.pdf" download class="btn">📄 Download Resume</a>
+            <a href="Resume_ReshavAgarwal.pdf" class="btn" download>📄 Download Resume</a>
         </div>
-    </section>
+    </header>
 
-    <!-- Contact Section (Just Below Hero) -->
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:reshavagarwal14@gmail.com">reshavagarwal14@gmail.com</a></p>
+        <p>Email: reshavagarwal14@gmail.com</p>
         <p>Phone: +91-6360675819</p>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Data Analyst passionate about insights, data visualization, and problem-solving. Former Quality Engineer, now specializing in SQL, Python, and Tableau.</p>
+    <!-- Experience Section with Timeline -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Quality Engineer 2 - Epsilon</h3>
+                    <p><strong>Jul 2023 - Present</strong></p>
+                    <p>• Optimized ETL data flow, improving operational efficiency by 25%.</p>
+                    <p>• Presented a Proof of Concept (POC) to 150+ team members.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Data Engineer - Ford Motors</h3>
+                    <p><strong>Sep 2021 - Jun 2023</strong></p>
+                    <p>• Managed data pipelines, improving efficiency by 30%.</p>
+                    <p>• Led Agile team meetings, improving productivity by 15%.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h3>📊 Sales Dashboard</h3>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Built an interactive Tableau dashboard analyzing sales trends.</p>
-                            <a href="your-github-link" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h3>🗄️ SQL Data Cleaning</h3>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Performed data cleaning using SQL on a messy dataset.</p>
-                            <a href="your-github-link" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="project">
+            <img src="sales-dashboard.png" alt="Sales Dashboard">
+            <h3>📊 Sales Dashboard</h3>
+            <p>Built an interactive Tableau dashboard analyzing sales trends.</p>
+            <a href="https://github.com/reshavagarwal14/sales-dashboard" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+            <img src="sql-data-cleaning.png" alt="SQL Data Cleaning">
+            <h3>🗂 SQL Data Cleaning</h3>
+            <p>Performed data cleaning using SQL on a messy dataset.</p>
+            <a href="https://github.com/reshavagarwal14/sql-data-cleaning" target="_blank">View Project</a>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill"><i class="fab fa-python"></i> Python</div>
-            <div class="skill"><i class="fas fa-database"></i> SQL</div>
-            <div class="skill"><i class="fas fa-chart-line"></i> Tableau</div>
-            <div class="skill"><i class="fab fa-microsoft"></i> Excel</div>
-        </div>
+        <p>SQL | Python | Tableau | Excel | Azure DevOps</p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <p>B.Tech in Computer Science | Christ University, Bengaluru</p>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards">
+        <h2>Awards</h2>
+        <p>🏆 2023 Q4 Star Award, Epsilon India</p>
+        <p>🏆 Certificate of Appreciation, Ford Motors (2022)</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Reshav Agarwal</p>
+        <p>© 2025 Reshav Agarwal. All rights reserved.</p>
     </footer>
 
 </body>
