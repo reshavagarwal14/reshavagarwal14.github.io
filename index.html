@@ -5,128 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reshav Agarwal - Data Analyst Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fae1dd;
-            color: #333;
-        }
-        header {
-            background: #e29578;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .project {
-            margin-bottom: 20px;
-        }
-        .resume-btn {
-            display: inline-block;
-            background: #e29578;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #e29578;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+
+    <!-- Header & Theme Toggle -->
     <header>
-        <h1>Reshav Agarwal</h1>
-        <p>Data Analyst | SQL | Python | Tableau</p>
+        <div class="logo">RA</div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle">🌙</button></li>
             </ul>
         </nav>
     </header>
-    
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <img src="your-image.jpg" alt="Reshav Agarwal" class="profile-pic">
+            <h1 class="fade-in">Hi, I'm <span class="highlight">Reshav Agarwal</span></h1>
+            <p class="typewriter">Data Analyst | SQL | Python | Tableau | Excel</p>
+            <div class="social-icons">
+                <a href="your-github-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="your-linkedin-url" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="Resume_ReshavAgarwal.pdf" download class="btn">📄 Download Resume</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I am <strong>Reshav Agarwal</strong>, a <strong>Quality Engineer 2 transitioning into Data Analytics</strong>, with expertise in <strong>ETL processes, data validation, Agile methodologies, and automation</strong>. My background in <strong>data engineering and quality assurance</strong> has equipped me with strong analytical and problem-solving skills, enabling me to optimize <strong>data workflows, improve operational efficiency, and drive data-driven decision-making</strong>.</p>
-
-        <p>At <strong>Epsilon</strong>, I played a leadership role in <strong>optimizing ETL workflows</strong> for hospitality and financial sector clients, increasing operational efficiency by <strong>25%</strong>. I identified critical issues early, preventing a <strong>2-month project delay</strong>, and led <strong>cross-functional collaboration</strong> to streamline validation processes, reducing cycle time by <strong>20%</strong>. Additionally, I developed and presented a <strong>proof of concept (POC) on Extract Analysis Flow</strong> to <strong>150+ team members</strong>, improving adoption by <strong>30%</strong>.</p>
-
-        <p>At <strong>Ford Motors</strong>, I successfully <strong>migrated a legacy system to Informatica</strong>, boosting system efficiency by <strong>20%</strong>. As an <strong>Agile team lead</strong>, I managed daily stand-ups and sprint planning, increasing <strong>team productivity by 15%</strong>. I also coordinated multiple teams to successfully complete the <strong>Business Continuity Plan (BCP)</strong> and <strong>Annual File Reviews (AFR)</strong>, ensuring 100% compliance with company objectives.</p>
-
-        <p><strong> I am now looking for opportunities in Data Analytics, Business Intelligence, and Data Engineering!</strong></p>
-
-        <a href="Resume_ReshavAgarwal.pdf" class="resume-btn" download>📄 Download Resume</a>
+        <p>Quality Engineer transitioning into Data Analytics with expertise in SQL, Python, and Tableau. Passionate about insights, data visualization, and solving business problems.</p>
     </section>
 
-    <section id="skills">
-        <h2>Skills & Expertise</h2>
-        <ul>
-            <li> <strong>SQL</strong> – Data extraction, transformation, and analysis</li>
-            <li> <strong>Python</strong> – Data cleaning and analytics (Pandas, NumPy)</li>
-            <li> <strong>Tableau</strong> – Data visualization and dashboarding</li>
-            <li> <strong>Excel</strong> – Advanced functions, data manipulation, and reporting</li>
-            <li> <strong>Azure DevOps</strong> – Agile project management</li>
-        </ul>
-
-        <h2>Awards & Recognition</h2>
-        <p>🏆 <strong>2023 Q4 Star Award</strong> – Epsilon India (Dec 2023)</p>
-        <p>🏅 <strong>Certificate of Appreciation</strong> – Ford Motor Pvt Ltd (Mar 2022)</p>
-    </section>
-
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Sales Dashboard</h3>
-            <p>Built an interactive Tableau dashboard analyzing sales trends.</p>
-            <a href="your-github-link">View Project</a>
-        </div>
-        <div class="project">
-            <h3>SQL Data Cleaning</h3>
-            <p>Performed data cleaning using SQL on a messy dataset.</p>
-            <a href="your-github-link">View Project</a>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>📊 Sales Dashboard</h3>
+                <p>Built an interactive Tableau dashboard analyzing sales trends.</p>
+                <a href="your-github-link" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>🗄️ SQL Data Cleaning</h3>
+                <p>Performed data cleaning using SQL on a messy dataset.</p>
+                <a href="your-github-link" target="_blank">View Project</a>
+            </div>
         </div>
     </section>
-    
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>⚡ Skills & Expertise</h2>
+        <div class="skills-container">
+            <span>SQL</span>
+            <span>Python</span>
+            <span>Tableau</span>
+            <span>Excel</span>
+            <span>Azure DevOps</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact</h2>
+        <h2>Contact Me</h2>
         <p>Email: <a href="mailto:reshavagarwal14@gmail.com">reshavagarwal14@gmail.com</a></p>
         <p>Phone: +91-6360675819</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/reshavagarwal14/">Reshav Agarwal</a></p>
     </section>
-    
+
     <footer>
-        <p>&copy; 2025 Reshav Agarwal. All rights reserved.</p>
+        <p>&copy; 2025 Reshav Agarwal</p>
     </footer>
+
 </body>
 </html>
