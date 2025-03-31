@@ -157,15 +157,39 @@
             background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97') no-repeat center center/cover;
             padding-top: 80px;
         }
-        
-        .hero-content {
-            max-width: 600px;
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
         }
-        
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
         .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid var(--primary-color); /* Cursor effect */
+            width: 0;
+            animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+        }
+
+
+        .hero-content h1 span {
             color: var(--secondary-color);
+        }
+
+        .hero-content {
+            max-width: 550px;
         }
         
         .hero-content p {
@@ -254,23 +278,23 @@
             background-color: var(--primary-color);
             top: 0;
             bottom: 0;
-            left: 20%;
+            left: 50%;
             margin-left: -2px;
         }
         
         .timeline-item {
-            padding: 10px 40px;
+            padding: 5px 30px;
             position: relative;
-            width: 80%;
+            width: 90%;
             box-sizing: border-box;
         }
         
         .timeline-item:nth-child(odd) {
-            left: 0;
+            right: 40%;
         }
         
         .timeline-item:nth-child(even) {
-            left: 20%;
+            left: 50%;
         }
         
         .timeline-item::after {
@@ -333,7 +357,7 @@
         .skills-content {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
+            gap: 60px;
         }
         
         .skill-card {
@@ -365,90 +389,102 @@
             color: #555;
         }
 
-        /* Education & Certifications Section */
+        /* Education Section */
         #education {
             background-color: var(--light-color);
         }
-        
+
         .education-content {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(50px, fr));
+            gap: 80px;
+            justify-content: center; /* Centers the grid items horizontally */
+            align-items: center; /* Centers items vertically */
+            place-items: center; /* Ensures all items are centered within the grid */
         }
-        
+
+
         .education-card {
             background: white;
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 20px;
             box-shadow: var(--box-shadow);
             transition: all 0.3s ease;
         }
-        
+
         .education-card:hover {
             transform: translateY(-10px);
         }
-        
+
         .education-card h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
             color: var(--secondary-color);
         }
-        
+
         .education-card h4 {
             color: var(--primary-color);
             margin-bottom: 10px;
             font-weight: 600;
         }
-        
+
         .education-card .date {
             color: #777;
             font-style: italic;
             margin-bottom: 15px;
         }
-        
+
         .education-card p {
             color: #555;
             margin-bottom: 10px;
         }
-        
-        .certifications {
-            margin-top: 30px;
+
+        /* Certifications Section */
+        #certifications {
+            background-color: var(--light-color);
         }
-        
-        .certifications h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--secondary-color);
-        }
-        
+
         .certifications-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); 
+            gap: 50px;
         }
-        
+
         .certification-item {
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: var(--box-shadow);
             transition: all 0.3s ease;
+            text-align: center;
         }
-        
+
         .certification-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
         }
-        
-        .certification-item h4 {
+
+        .certification-item h3 {
+            font-size: 1.0rem;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .certification-item .provider {
             color: var(--primary-color);
-            margin-bottom: 10px;
             font-weight: 600;
+            margin-bottom: 5px;
         }
-        
+
+        .certification-item .date {
+            color: #777;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
         .certification-item p {
             color: #555;
         }
-        
+
         /* Projects Section */
         #projects {
             background-color: white;
@@ -520,7 +556,7 @@
         
         .awards-content {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
             gap: 30px;
         }
         
@@ -741,8 +777,8 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#education">Education</a></li>
+                    <li><a href="#certification">Certification</a></li>
                     <li><a href="#awards">Awards</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
@@ -755,12 +791,13 @@
     <section id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Hello, I'm <span>Reshav Agarwal</span></h1>
-                <p>Quality Engineer with expertise in data analysis and ETL processes</p>
+                <h1>Hello, <span>I'm Reshav Agarwal.</span></h1>
+                <p>Aspiring Data Analyst with expertise in data analysis and ETL processes</p>
                 <a href="Resume_ReshavAgarwal.pdf" class="btn" download>Download CV</a>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/reshavagarwal14/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/reshavagarwal14" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:reshavagarwal14@example.com" target="_blank"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -872,11 +909,12 @@
         </div>
     </section>
 
-    <!-- Education & Certifications Section -->
+    <!-- Education -->
     <section id="education">
+        <center>
         <div class="container">
             <div class="section-title">
-                <h2>Education & Certifications</h2>
+                <h2>Education</h2>
             </div>
             <div class="education-content">
                 <div class="education-card">
@@ -885,27 +923,36 @@
                     <div class="date">July 2017 - June 2021</div>
                     <p>CGPA: 8.88</p>
                 </div>
-                <div class="certifications">
-                    <h3>Professional Certifications</h3>
+            </div>
+        </div>
+        </center>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certification">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certifications</h2>
+            </div>
+            <div class="certifications-content">
                     <div class="certifications-list">
                         <div class="certification-item">
-                            <h4>SQL for Data Analysis: Advanced SQL Querying Techniques</h4>
+                            <h3>SQL for Data Analysis: Advanced SQL Querying Techniques</h3>
                             <p>Udemy</p>
                         </div>
                         <div class="certification-item">
-                            <h4>Complete Data Analyst Bootcamp: From Basics To Advanced</h4>
+                            <h3>Complete Data Analyst Bootcamp: From Basics To Advanced</h3>
                             <p>Udemy</p>
                         </div>
                         <div class="certification-item">
-                            <h4>The Complete Python Bootcamp: From Zero to Hero in Python</h4>
+                            <h3>The Complete Python Bootcamp: From Zero to Hero in Python</h3>
                             <p>Udemy</p>
                         </div>
                         <div class="certification-item">
-                            <h4>Tableau 2024 A-Z: Hands-On Tableau Training for Data Science</h4>
+                            <h3>Tableau 2024 A-Z: Hands-On Tableau Training for Data Science</h3>
                             <p>Udemy</p>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -920,7 +967,7 @@
                 <div class="award-card">
                     <i class="fas fa-award"></i>
                     <h3>2023 Q4 Star Award</h3>
-                    <div class="company">Epsilon India</div>
+                    <div class="company">Epsilon India Pvt Ltd</div>
                     <div class="date">December 2023</div>
                 </div>
                 <div class="award-card">
@@ -933,7 +980,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section 
     <section id="projects">
         <div class="container">
             <div class="section-title">
@@ -963,3 +1010,5 @@
                             <a href="https://github.com/reshavagarwal14" target="_blank"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
+                    -->
+                
